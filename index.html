@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Simulador Tarjeta de Crédito</title>
+</head>
+<body>
+    <main class="main-container">
+        <header class="header">
+            <div class="header-container">
+                Andrés López
+            </div>
+        </header>
+
+        <div class="main-description">
+            <h1 class="main-description-title">Simulador de Pagos Tarjeta de Crédito</h1>
+            <p class="main-description-text">Bienvenido a nuestro simulador de pagos para tarjetas de crédito. Con nuestra herramienta, puedes calcular tus pagos mensuales fácilmente, tomando en cuenta el capital y los intereses de tu deuda.
+            </p>
+            <p class="main-drescription-text">No más preocupaciones por las complejas fórmulas matemáticas, nuestro simulador de pagos de tarjeta de crédito hace el trabajo por ti. ¡Ahorra tiempo y asegúrate de estar al día con tus pagos!</p>
+        </div>
+
+        <div class="simulator">
+            <section class="left-side">
+                <p class="input-title">Selecciona la divisa</p>
+                <div class="currency-area">
+                    <input type="radio" name="currency" id="cop" class="input-radio">
+                    <label for="cop" class="currency">COP</label>
+
+                    <input type="radio" name="currency" id="usd" class="input-radio">
+                    <label for="usd" class="currency">USD</label>
+
+                    <input type="radio" name="currency" id="eur" class="input-radio">
+                    <label for="eur" class="currency">EUR</label>
+                </div>
+
+                <p class="input-title">Valor de la Compra</p>
+                <input type="number" name="loan" id="loan" class="number-input" placeholder="$">
+
+                <p class="input-title">Tasa de Interes (E.A.)</p>
+                <input type="number" name="ea" id="ea" class="number-input" placeholder="%">
+
+                <p class="input-title">Cuotas</p>
+                <select name="installments" id="installments" class="select-input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                </select>
+
+                <div class="submit-section">
+                    <button id="submit-button" class="submit-button">Calcular</button>
+                </div>
+            </section>
+
+            <section class="right-side">
+                <div class="simulator-box">
+                    <p class="text-simulator-box">Por tu deuda pagarás</p>
+                    <p class="total-amount">$<span id="total-amount">0.00</span> COP</p>
+                    <div class="loan-info">
+                        <div class="loan-info-details">
+                            <p class="title">Tasa EA</p>
+                            <p id="apr-description" class="description">0.00%</p>
+                        </div>
+                        <div class="loan-info-details">
+                            <p class="title">Interes MV</p>
+                            <p id="mv-description" class="description">0.00%</p>
+                        </div>
+                        <div class="loan-info-details">
+                            <p class="title">Cuotas</p>
+                            <p id="installments-description" class="description">0</p>
+                        </div>
+                    </div>
+                    <table id="payment-plan-table" class="payment-plan">
+                        <tr>
+                            <td>Cuota</td>
+                            <td>Capital</td>
+                            <td>Intereses</td>
+                            <td>Total Cuota</td>
+                        </tr>
+                    </table>
+                    <div class="restart-section">
+                        <button class="restart-button">Reiniciar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>Developed with <span class="hearth">💜</span> by Andrés López</p>
+        </footer>
+    </main>
+    <script src="./assets/js/code.js"></script>
+</body>
+</html>

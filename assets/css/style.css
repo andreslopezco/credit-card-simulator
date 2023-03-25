@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-1: #F6F1F1;
+    --color-2: #000000;
+    --color-3: #19A7CE;
+    --color-4: #146C94;
+    --shadow-color: #00000030;
+    --border-radius: 15px;
+}
+
+body {
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: -8px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid var(--color-1);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.header-container {
+    width: 1000px;
+}
+
+.main-description {
+    width: 1000px;
+    margin: 30px 0px;
+}
+
+.main-description-title {
+    color: var(--color-4);
+}
+
+.main-description-text {
+    margin: 0px;
+    color: var(--color-2);
+}
+
+.simulator {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    width: 1000px;
+    gap: 5%;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-title {
+    color: var(--color-2);
+    font-weight: 500;
+    margin: 20px 0px 10px 0px;
+}
+
+.currency-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.input-radio {
+    display: none;
+}
+
+.currency {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 50px;
+    background-color: var(--color-3);
+    color: var(--color-1);
+    border: 1px solid var(--shadow-color);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+.currency:hover {
+    background-color: var(--color-4);
+    color: var(--color-1);
+    transition: 500ms;
+}
+
+.currency:checked {
+    background-color: var(--color-4);
+    color: var(--color-1);
+}
+
+.number-input {
+    width: 100%;
+    height: 25px;
+    margin: 0px;
+    font-size: 18px;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+}
+
+.select-input {
+    width: 101.5%;
+    height: 30px;
+    margin: 0px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+}
+
+.submit-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.submit-button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--shadow-color);
+    border-radius: var(--border-radius);
+    background-color: var(--color-3);
+    color: var(--color-1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.submit-button:hover {
+    background-color: var(--color-4);
+    color: var(--color-1);
+    transition: 500ms;
+}
+
+.right-side {  
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.simulator-box {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    background-color: var(--color-4);
+    color: var(--color-1);
+    box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.text-simulator-box {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.total-amount {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.loan-info {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loan-info-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loan-info-details .title {
+    margin: 0px;
+    color: var(--color-1);
+}
+
+.loan-info-details .description {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.payment-plan {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.restart-section {
+    display: flex;
+    justify-content: center;
+}
+
+.restart-button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--shadow-color);
+    border-radius: var(--border-radius);
+    background-color: var(--color-3);
+    color: var(--color-1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.restart-button:hover {
+    background-color: var(--color-1);
+    color: var(--color-3);
+    transition: 500ms;
+}
