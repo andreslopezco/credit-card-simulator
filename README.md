@@ -13,4 +13,4 @@ The credit card payment simulator project is a personal project, developed on HT
 - Selection of number of installments (1 - 48).
 - Payment projection chart **(under development)**.
 - Payment plan projection.
-- Multiple displays of the payment plan box **(under development)**.
+- Multiple displays of the payment plan box.

@@ -8,41 +8,28 @@
     <title>Simulador Tarjeta de Crédito</title>
 </head>
 <body>
-    <main class="main-container">
-        <header class="header">
-            <div class="header-container">
-                <a href="https://andreslopez.co/"><img src="./assets/img/logo.png" alt="AndresLopez.co Logo" class="logo" /></a>
-            </div>  
-        </header>
-
-        <div class="main-description">
+    <main class="main">
+        <section class="main-description-section">
             <h1 class="main-description-title">Simulador de Pagos Tarjeta de Crédito</h1>
-            <p class="main-description-text">Bienvenido a nuestro simulador de pagos para tarjetas de crédito. Con nuestra herramienta, puedes calcular tus pagos mensuales fácilmente, tomando en cuenta el capital y los intereses de tu deuda.
-            </p>
+            <p class="main-description-text">Bienvenido a nuestro simulador de pagos para tarjetas de crédito. Con nuestra herramienta, puedes calcular tus pagos mensuales fácilmente, tomando en cuenta el capital y los intereses de tu deuda.</p>
             <p class="main-drescription-text">No más preocupaciones por las complejas fórmulas matemáticas, nuestro simulador de pagos de tarjeta de crédito hace el trabajo por ti. ¡Ahorra tiempo y asegúrate de estar al día con tus pagos!</p>
-        </div>
-
-        <div class="simulator">
-            <section class="left-side">
+        </section>
+        <section class="simulator-section">
+            <div class="left-side">
                 <p class="input-title">Selecciona la divisa</p>
-                <div class="currency-area">
-                    <input type="radio" name="currency" id="cop">
-                    <label for="cop" class="currency">COP</label>
-
-                    <input type="radio" name="currency" id="usd">
-                    <label for="usd" class="currency">USD</label>
-
-                    <input type="radio" name="currency" id="eur">
-                    <label for="eur" class="currency">EUR</label>
+                <div class="currency-selection-area">
+                    <input type="radio" name="currency" id="cop">                  
+                    <label for="cop" class="currency-label">COP</label>
+                    <input type="radio" name="currency" id="usd">                    
+                    <label for="usd" class="currency-label">USD</label>
+                    <input type="radio" name="currency" id="eur">                  
+                    <label for="eur" class="currency-label">EUR</label>
                 </div>
-
-                <p class="input-title">Valor de la Compra</p>
-                <input type="number" name="loan" id="loan" class="number-input" placeholder="$">
-
-                <p class="input-title">Tasa de Interes (E.A.)</p>
+                <p class="input-title">Valor de la Compra</p>             
+                <input type="number" name="capital" id="capital" class="number-input" placeholder="$">
+                <p class="input-title">Tasa de Interes (E.A.)</p>           
                 <input type="number" name="ea" id="ea" class="number-input" placeholder="%">
-
-                <p class="input-title">Cuotas</p>
+                <p class="input-title">Cuotas</p>            
                 <select name="installments" id="installments" class="select-input">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -93,46 +80,49 @@
                     <option value="47">47</option>
                     <option value="48">48</option>
                 </select>
-
-                <div class="submit-section">
-                    <button id="submit-button" class="submit-button">Calcular</button>
+                <div class="submit-button-area">
+                    <button id="submit" class="button-1">Calcular</button>
                 </div>
-            </section>
-
-            <section class="right-side">
+            </div>
+            <div class="right-side">
                 <div class="simulator-box">
-                    <p class="text-simulator-box">Por tu deuda pagarás</p>
-                    <p class="total-amount">$<span id="total-amount">0.00</span> COP</p>
-                    <div class="loan-info">
-                        <div class="loan-info-details">
-                            <p class="title">Tasa EA</p>
-                            <p id="apr-description" class="description">0.00%</p>
+                    <section id="image-section">
+                        <img src="./assets/img/financial-vector.svg" alt="Exito Financiero" class="financial-image">
+                    </section>
+                    <section id="payment-plan-section">
+                        <p class="text-simulator-box">Por tu deuda pagarás</p>
+                        <p class="total-amount">$<span id="total-amount-description">0.00</span> <span id="currency-description">COP</span></p>
+                        <div class="loan-info">
+                            <div class="loan-info-details">
+                                <p class="loan-info-title">Tasa EA</p>
+                                <p id="ea-description" class="loan-info-description">0.00%</p>
+                            </div>
+                            <div class="loan-info-details">
+                                <p class="loan-info-title">Interes MV</p>
+                                <p id="mv-description" class="loan-info-description">0.00%</p>
+                            </div>
+                            <div class="loan-info-details">
+                                <p class="loan-info-title">Cuotas</p>
+                                <p id="installments-description" class="loan-info-description">0</p>
+                            </div>
                         </div>
-                        <div class="loan-info-details">
-                            <p class="title">Interes MV</p>
-                            <p id="mv-description" class="description">0.00%</p>
+                        <table id="payment-plan-description" class="payment-plan">
+                            <tr>
+                                <td>Cuota</td>
+                                <td>Capital</td>
+                                <td>Intereses</td>
+                                <td>Total Cuota</td>
+                            </tr>
+                        </table>
+                        <div class="restart-button-area">
+                            <button id="restart" class="button-2">Reiniciar</button>
                         </div>
-                        <div class="loan-info-details">
-                            <p class="title">Cuotas</p>
-                            <p id="installments-description" class="description">0</p>
-                        </div>
-                    </div>
-                    <table id="payment-plan-table" class="payment-plan">
-                        <tr>
-                            <td>Cuota</td>
-                            <td>Capital</td>
-                            <td>Intereses</td>
-                            <td>Total Cuota</td>
-                        </tr>
-                    </table>
-                    <div class="restart-section">
-                        <button class="restart-button">Reiniciar</button>
-                    </div>
+                    </section>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
         <footer>
-            <p>Developed with <span class="hearth">💜</span> by Andrés López</p>
+            <p>Developed with <span class="hearth">🖤</span> by Andrés López</p>
         </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js" integrity="sha512-v3ygConQmvH0QehvQa6gSvTE2VdBZ6wkLOlmK7Mcy2mZ0ZF9saNbbk19QeaoTHdWIEiTlWmrwAL4hS8ElnGFbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

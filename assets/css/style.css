@@ -5,8 +5,13 @@
     --color-2: #000000;
     --color-3: #19A7CE;
     --color-4: #146C94;
+    --disabled-color: #146C9490;
     --shadow-color: #00000030;
     --border-radius: 15px;
+    --measure-1: 10px;
+    --measure-2: 20px;
+    --measure-3: 30px;
+    --transition: 500ms;
 }
 
 body {
@@ -15,38 +20,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.main-container {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    margin: -8px;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-2);
-    color: var(--color-1);
-    width: 100%;
-    height: 150px;
-    border-bottom: 1px solid var(--color-1);
-    box-shadow: 0px 0px 10px var(--shadow-color);
-}
-
-.header-container {
+.main-description-section {
     width: 1000px;
-}
-
-.logo {
-    width: 200px;
-}
-
-.main-description {
-    width: 1000px;
-    margin: 30px 0px;
+    margin: var(--measure-1) 0px;
 }
 
 .main-description-title {
@@ -58,10 +40,11 @@ body {
     color: var(--color-2);
 }
 
-.simulator {
+.simulator-section {
     display: grid;
     grid-template-columns: 40% 55%;
     width: 1000px;
+    margin-top: var(--measure-1);
     gap: 5%;
 }
 
@@ -74,25 +57,25 @@ body {
 .input-title {
     color: var(--color-2);
     font-weight: 500;
-    margin: 20px 0px 10px 0px;
+    margin: var(--measure-2) 0px var(--measure-1) 0px;
 }
 
-.currency-area {
+.currency-selection-area {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.currency-area input {
+.currency-selection-area input {
     display: none;
 }
 
-.currency-area input:checked + label {
+.currency-selection-area input:checked + label {
     background-color: var(--color-3);
     color: var(--color-1);
 }
 
-.currency {
+.currency-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,10 +88,10 @@ body {
     font-weight: 500;
 }
 
-.currency:hover {
+.currency-label:hover {
     background-color: var(--color-3);
     color: var(--color-1);
-    transition: 500ms;
+    transition: var(--transition);
 }
 
 .number-input {
@@ -130,27 +113,10 @@ body {
     border-radius: 5px;
 }
 
-.submit-section {
+.submit-button-area {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
-}
-
-.submit-button {
-    width: 150px;
-    height: 40px;
-    border: 1px solid var(--shadow-color);
-    border-radius: var(--border-radius);
-    background-color: var(--color-4);
-    color: var(--color-1);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.submit-button:hover {
-    background-color: var(--color-3);
-    color: var(--color-1);
-    transition: 500ms;
+    margin-top: var(--measure-3);
 }
 
 .right-side {  
@@ -164,10 +130,14 @@ body {
     height: auto;
     box-sizing: border-box;
     border-radius: var(--border-radius);
-    padding: 30px;
+    padding: var(--measure-3);
     background-color: var(--color-4);
     color: var(--color-1);
     box-shadow: 0px 0px 10px var(--shadow-color);
+}
+
+.financial-image {
+    width: 90%;
 }
 
 .text-simulator-box {
@@ -176,7 +146,7 @@ body {
 }
 
 .total-amount {
-    margin: 20px 0px;
+    margin: var(--measure-2) 0px;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -186,7 +156,7 @@ body {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: var(--measure-2);
 }
 
 .loan-info-details {
@@ -196,28 +166,49 @@ body {
     align-items: center;
 }
 
-.loan-info-details .title {
+.loan-info-title {
     margin: 0px;
     color: var(--color-1);
 }
 
-.loan-info-details .description {
+.loan-info-description {
     margin: 0px;
     font-weight: 600;
 }
 
 .payment-plan {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: var(--measure-2);
     text-align: center;
 }
 
-.restart-section {
+.restart-button-area {
     display: flex;
     justify-content: center;
 }
 
-.restart-button {
+.button-1 {
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--shadow-color);
+    border-radius: var(--border-radius);
+    background-color: var(--color-4);
+    color: var(--color-1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.button-1:hover {
+    background-color: var(--color-3);
+    color: var(--color-1);
+    transition: 500ms;
+}
+
+.button-1:disabled {
+    background-color: var(--disabled-color);
+}
+
+.button-2 {
     width: 150px;
     height: 40px;
     border: 1px solid var(--shadow-color);
@@ -228,8 +219,17 @@ body {
     font-weight: 600;
 }
 
-.restart-button:hover {
+.button-2:hover {
     background-color: var(--color-1);
     color: var(--color-3);
     transition: 500ms;
+}
+
+footer {
+    margin: auto;
+    margin-top: var(--measure-3);
+}
+
+.hearth {
+    color: var(--color-2);
 }
