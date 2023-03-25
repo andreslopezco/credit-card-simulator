@@ -64,6 +64,7 @@ body {
 .left-side {
     display: flex;
     flex-direction: column;
+    justify-content: start;
 }
 
 .input-title {
@@ -78,8 +79,13 @@ body {
     justify-content: space-around;
 }
 
-.input-radio {
+.currency-area input {
     display: none;
+}
+
+.currency-area input:checked + label {
+    background-color: var(--color-3);
+    color: var(--color-1);
 }
 
 .currency {
@@ -88,7 +94,7 @@ body {
     align-items: center;
     width: 115px;
     height: 50px;
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     color: var(--color-1);
     border: 1px solid var(--shadow-color);
     border-radius: var(--border-radius);
@@ -96,14 +102,9 @@ body {
 }
 
 .currency:hover {
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     color: var(--color-1);
     transition: 500ms;
-}
-
-.currency:checked {
-    background-color: var(--color-4);
-    color: var(--color-1);
 }
 
 .number-input {
@@ -136,14 +137,14 @@ body {
     height: 40px;
     border: 1px solid var(--shadow-color);
     border-radius: var(--border-radius);
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     color: var(--color-1);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
 .submit-button:hover {
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     color: var(--color-1);
     transition: 500ms;
 }
@@ -151,7 +152,7 @@ body {
 .right-side {  
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 
 .simulator-box {
@@ -173,7 +174,7 @@ body {
 .total-amount {
     margin: 20px 0px;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
 }
 
